@@ -49,4 +49,4 @@ while i  < len(commands):
             i = i + getVal(command[2]) -1
         print("jump to command " + str(i+1) + ": " + str(commands[i+1]))
     print(registers)
-    i += 1
+    i += 1 #test
