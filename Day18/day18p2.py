@@ -56,7 +56,7 @@ def execution(command,programID):
     elif command[0] == "jgz" and getVal(command[1],registers) > 0: #jgz X Y jumps with an offset of the value of Y, but only if the value of X is greater than zero.
         # (An offset of 2 skips the next instruction, an offset of -1 jumps to the previous instruction, and so on.)
         if(getVal(command[2],registers) > 0):
-            return getVal(command[2],registers) +1
+            return getVal(command[2],registers)
         else:
             return getVal(command[2],registers)
     return 1
@@ -83,7 +83,7 @@ while True:
         print("##### Deadlock!")
         print("Program 1 send " + str(snd1) + " times")
         break
-    if True:
+    if False:
         print("------- Execution cycle ")
         print("\t------- Program 0 ")
         print("\t\t Cycle " + str(cycle0Old))
